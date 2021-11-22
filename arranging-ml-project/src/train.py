@@ -24,7 +24,7 @@ def run(fold):
     accuracy = metrics.accuracy_score(y_valid, preds)
     print(f"Fold={fold},Accuracy ={accuracy}")
 
-    joblib.dump(clf, f"../modelsdt_{fold}.bin")
+    joblib.dump(clf, f"{config.MODEL_OUTPUT}modelsdt_{fold}.bin")
 
 
 if __name__ == "__main__":

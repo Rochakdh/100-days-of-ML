@@ -1,2 +1,2 @@
 TRAINING_FILE = "../input/train.csv"
-MODEL_OUTPUT = "../models/ "
+MODEL_OUTPUT = "../models/"
