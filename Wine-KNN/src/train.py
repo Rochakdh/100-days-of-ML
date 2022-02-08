@@ -51,13 +51,13 @@ def run(fold,model):
     """
         clf.fit(df_train[cols], df_train.quality)
     """
-    x_train = df_train.drop(["quality","kfold"], axis=1)
+    x_train = df_train.drop(["quality","kfold","residual sugar"], axis=1)
     x_train = normalize(x_train)
     x_train = x_train.values
 
     y_train = df_train.quality.values
 
-    x_valid = df_valid.drop(["quality","kfold"], axis=1)
+    x_valid = df_valid.drop(["quality","kfold","residual sugar"], axis=1)
     x_valid = normalize(x_valid)
     x_valid = x_valid.values
 
