@@ -60,10 +60,10 @@ if __name__ == '__main__':
     model_used.fit_generator(
         train_generator,
         steps_per_epoch=115,
-        epochs=20,
+        epochs=10,
         validation_data=validation_generator,
         validation_steps=20,
         callbacks=[callbacks]
     )
-    model_used.save_weights(f'{config.MODEL_OUTPUT}/model.h5')
+    model_used.save_weights(f'{config.MODEL_OUTPUT}model')
     print(model_used.summary())
